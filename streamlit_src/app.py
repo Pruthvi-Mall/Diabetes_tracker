@@ -7,7 +7,7 @@ from agent_src.health_ai_engine import lifestyle_advice, diet_plan, emergency_al
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 model = joblib.load(os.path.join(BASE_DIR, "artifacts", "diabetes_model.pkl"))
 
-st.title("🛡 AI Community Health Guardian")
+st.title("🛡 AI Community Health Guardian by Pruthvi Mall")
 
 labels = ["Pregnancies","Glucose","BloodPressure","SkinThickness",
           "Insulin","BMI","DiabetesPedigreeFunction","Age"]
@@ -29,3 +29,4 @@ if st.button("Analyze Health"):
 
     st.subheader("Emergency Alert")
     st.write(emergency_alert(data[1]))
+
